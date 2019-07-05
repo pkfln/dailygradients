@@ -1,0 +1,27 @@
+{
+  "name": "dailygradients",
+  "version": "0.1.0",
+  "description": "A bot which posts a beautiful gradient from uiGradients.com every day @dailygradients on Twitter.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkfln/dailygradients.git"
+  },
+  "keywords": [
+    "twitter",
+    "bot",
+    "gradient",
+    "gradients",
+    "colors",
+    "uigradients"
+  ],
+  "author": "pkfln",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pkfln/dailygradients/issues"
+  },
+  "homepage": "https://github.com/pkfln/dailygradients#readme"
+}
