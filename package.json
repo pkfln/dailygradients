@@ -4,7 +4,8 @@
   "description": "A bot which posts a beautiful gradient from uiGradients.com every day @dailygradients on Twitter.",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ."
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/pkfln/dailygradients/issues"
   },
-  "homepage": "https://github.com/pkfln/dailygradients#readme"
+  "homepage": "https://github.com/pkfln/dailygradients#readme",
+  "devDependencies": {
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2"
+  }
 }
