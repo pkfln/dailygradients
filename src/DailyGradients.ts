@@ -26,6 +26,7 @@ export default class DailyGradients {
     this.imageHeight = parseInt(process.env.IMAGE_HEIGHT!, 10);
     
     Schedule.scheduleJob(process.env.CRONTIME!, () => this.schelduledTask());
+    console.log('>> Task scheduled. Waiting...');
   }
 
   private async schelduledTask(): Promise<void> {
@@ -35,6 +36,7 @@ export default class DailyGradients {
     const fragment: string = gradient.name.trim().replace(' ', '');
     const statusText: string = `${gradient.name} - ${gradient.colors.map(c => c.toUpperCase()).join(', ')}\n\nhttps://uigradients.com/#${fragment}`;
 
-    this.twitter.postImage(generatedImage, statusText);
+    await this.twitter.postImage(generatedImage, statusText);
+    console.log('>> New gradient posted.');
   }
 }
