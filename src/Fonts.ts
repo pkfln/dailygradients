@@ -1,27 +1,27 @@
 import Jimp from 'jimp';
 
-export const FONT_PATH: string = '../fonts/';
+export const FONT_PATH: string = './fonts/';
 
 export default class Fonts {
-  private white: any = null;
-  private black: any = null;
+  private whiteFont: any = null;
+  private blackFont: any = null;
 
   public async loadFonts(): Promise<void> {
-    this.white = await Jimp.loadFont(`${FONT_PATH}apercu-mono-white.fnt`);
-    this.black = await Jimp.loadFont(`${FONT_PATH}apercu-mono-black.fnt`);
+    this.whiteFont = await Jimp.loadFont(`${FONT_PATH}apercu-mono-white.fnt`);
+    this.blackFont = await Jimp.loadFont(`${FONT_PATH}apercu-mono-black.fnt`);
   }
 
-  public get getWhite(): any {
-    if (!this.white)
+  public get white(): any {
+    if (!this.whiteFont)
       throw new Error('Apercu Mono White hasn\'t been loaded yet.');
 
-    return this.white;
+    return this.whiteFont;
   }
 
-  public get getBlack(): any {
-    if (!this.black)
+  public get black(): any {
+    if (!this.blackFont)
       throw new Error('Apercu Mono Black hasn\'t been loaded yet.');
 
-    return this.black;
+    return this.blackFont;
   }
 }
